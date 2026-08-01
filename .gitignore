@@ -1,0 +1,30 @@
+# 데이터셋 · 가중치 (주관 기관 자산, 리포지토리에 포함하지 않음)
+data/
+data_seq/
+*.pt
+*.onnx
+*.engine
+
+# 학습 산출물
+runs/
+*.log
+wandb/
+
+# 대용량 영상 원본
+*.mp4
+*.avi
+*.mov
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+venv/
+.venv/
+env/
+
+# OS / 편집기
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
