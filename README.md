@@ -64,8 +64,24 @@
 
 객체 검출로 사람을 찾고, 추적으로 ID를 부여한 뒤, 각 ID의 프레임 시퀀스를 행동 분류 모델에 넣어 **Top-5 행동 클래스를 확률과 함께 출력**하는 파이프라인을 구성했습니다. → [06번 문서](docs/06-action-recognition.md)
 
-> 📹 **결과 영상 원본 (1920×1080, 369프레임)** — [Releases에서 다운로드](../../releases/latest)
-> 위 GIF는 일부 구간을 축소·압축한 것입니다. 전체 영상은 Releases에 첨부되어 있습니다.
+### 차량 통신 — CAN 시그널 실시간 모니터링
+
+<p align="center">
+  <img src="assets/results/can-demo.gif" width="480" alt="CAN 시그널 모니터">
+</p>
+
+VMware 위 Ubuntu에 Kvaser USB-CAN을 패스스루로 물리고, 500 kbps 버스에서 **조향각·조향 토크·각속도·RPM·방향지시등** 신호를 실시간으로 모니터링했습니다. 통상 ROS로 구성하는 부분을 **Claude Code CLI를 운용 셸로 사용**해 프로세스를 기동·감시·종료하는 방식으로 대체했고, 그 방식의 한계(실시간성 미보장, pub/sub 부재, 표준 기록 수단 부재)까지 함께 정리했습니다. → [07번 문서](docs/07-can-communication.md)
+
+---
+
+## 📦 Releases
+
+용량 때문에 저장소에 포함하지 않은 원본 영상은 [Releases](../../releases/latest)에 첨부되어 있습니다.
+
+| 파일 | 내용 |
+|---|---|
+| `action-detection-result.mp4` | 검출 + 추적 + 행동 인식 결과 영상 (1920×1080, 369프레임) |
+| `can-signal-monitor.mp4` | CAN 시그널 실시간 모니터링 시연 (41초) |
 
 ---
 
@@ -75,7 +91,7 @@
 **인프라** — KADaP GPUaaS (Astrago), NVIDIA A100 PCIe / H100 NVL / L40S, Docker, Kubernetes 기반 워크로드
 **데이터·분석** — NumPy, OpenCV, Pillow, pandas, Matplotlib, perceptual hashing
 **차량 통신** — CAN, python-can, SocketCAN, Kvaser USB-CAN, cantools/DBC
-**환경** — Linux(Ubuntu), conda/miniconda, JupyterLab, Git
+**환경·도구** — Linux(Ubuntu), VMware Workstation, conda/miniconda, JupyterLab, Claude Code CLI, Git
 
 ---
 
