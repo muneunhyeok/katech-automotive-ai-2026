@@ -70,7 +70,7 @@
   <img src="assets/results/can-demo.gif" width="480" alt="CAN 시그널 모니터">
 </p>
 
-VMware 위 Ubuntu에 Kvaser USB-CAN을 패스스루로 물리고, 500 kbps 버스에서 **조향각·조향 토크·각속도·RPM·방향지시등** 신호를 실시간으로 모니터링했습니다. 통상 ROS로 구성하는 부분을 **Claude Code CLI를 운용 셸로 사용**해 프로세스를 기동·감시·종료하는 방식으로 대체했고, 그 방식의 한계(실시간성 미보장, pub/sub 부재, 표준 기록 수단 부재)까지 함께 정리했습니다. → [07번 문서](docs/07-can-communication.md)
+VMware 위 Ubuntu에 Kvaser USB-CAN을 패스스루로 물리고, 500 kbps 아이오닉 5에서 **조향각·조향 토크·각속도·RPM·방향지시등** 신호를 실시간으로 모니터링했습니다. 통상 ROS로 구성하는 부분을 **Claude Code CLI를 운용 셸로 사용**해 프로세스를 기동·감시·종료하는 방식으로 대체했고, 그 방식의 한계(실시간성 미보장, pub/sub 부재, 표준 기록 수단 부재)까지 함께 정리했습니다. → [07번 문서](docs/07-can-communication.md)
 
 ---
 
